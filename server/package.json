@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
-    "build": "tsc && tsc-alias"
+    "build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/server.js --packages=external"
   },
   "keywords": [
     "example",
@@ -56,6 +56,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.5",
     "@types/node": "^20.5.9",
+    "esbuild": "^0.27.1",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.16",
